@@ -11,7 +11,7 @@ export const botConfig = {
   // - "invisible" = appears offline
   presence: {
     // Current online state shown on Discord.
-    status: "online",
+    status: "idle",
 
     // Activity lines shown under the bot name.
     // `type` number mapping from Discord:
@@ -24,9 +24,9 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Made with ❤️",
+        name: "for the start of an age 💫",
         // Activity type number (0 = Playing).
-        type: 0,
+        type: 2,
       },
     ],
   },
@@ -59,9 +59,9 @@ export const botConfig = {
   applications: {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
-      { question: "What is your name?", required: true },
-      { question: "How old are you?", required: true },
-      { question: "Why do you want to join?", required: true },
+      { question: "WHat's your preferred name?", required: true },
+      { question: "What's your preferred pronouns?", required: true },
+      { question: "Please input the codeword found in the rules!", required: true },
     ],
 
     // Embed colors by application status.
@@ -78,7 +78,7 @@ export const botConfig = {
     deleteDeniedAfter: 7,
 
     // Auto-delete approved applications after this many days.
-    deleteApprovedAfter: 30,
+    deleteApprovedAfter: 7,
 
     // Role IDs allowed to manage applications.
     managerRoles: [], // Will be populated from environment or database
@@ -91,19 +91,19 @@ export const botConfig = {
   embeds: {
     colors: {
       // Main brand colors.
-      primary: "#336699",
-      secondary: "#2F3136",
+      primary: "#B7FFE5",
+      secondary: "#FFB7B7",
 
       // Standard status colors for success/error/warning/info messages.
-      success: "#57F287",
-      error: "#ED4245",
-      warning: "#FEE75C",
+      success: "#B7FFE5",
+      error: "#FFB7B7",
+      warning: "#FFEAC3",
       info: "#3498DB",
 
       // Neutral utility colors.
-      light: "#FFFFFF",
-      dark: "#202225",
-      gray: "#99AAB5",
+      light: "#EBEBEB",
+      dark: "#232323",
+      gray: "#A3A3A3",
 
       // Discord-style palette shortcuts.
       blurple: "#5865F2",
@@ -119,14 +119,14 @@ export const botConfig = {
         ended: "#ED4245",
       },
       ticket: {
-        open: "#57F287",
-        claimed: "#FAA61A",
-        closed: "#ED4245",
-        pending: "#99AAB5",
+        open: "#B7FFE5",
+        claimed: "#A3A3A3",
+        closed: "#FFB7B7",
+        pending: "#FFEAC3",
       },
-      economy: "#F1C40F",
-      birthday: "#E91E63",
-      moderation: "#9B59B6",
+      economy: "#91D4FF",
+      birthday: "#FF91D3",
+      moderation: "#FFEAC3",
 
       // Ticket priority color mapping.
       priority: {
@@ -139,7 +139,7 @@ export const botConfig = {
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "eunibot",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -159,11 +159,11 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "stars",
       // Plural display name.
       namePlural: "coins",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "💫",
     },
 
     // Starting balance for new users.
@@ -176,7 +176,7 @@ export const botConfig = {
     dailyAmount: 100,
 
     // Work command random payout range.
-    workMin: 10,
+    workMin: 30,
     workMax: 100,
 
     // Beg command random payout range.
@@ -184,7 +184,7 @@ export const botConfig = {
     begMax: 50,
 
     // Chance to succeed when robbing (0.4 = 40%).
-    robSuccessRate: 0.4,
+    robSuccessRate: 0.2,
 
     // Jail time after failed rob (milliseconds).
     // 3600000 = 1 hour.
@@ -303,10 +303,10 @@ export const botConfig = {
       // - "none"        = everyone is auto-verified immediately
       // - "account_age" = account must be older than set days
       // - "server_size" = auto-verify everyone only in smaller servers
-      defaultCriteria: "none",
+      defaultCriteria: "account_age",
 
       // Days used when `defaultCriteria` is `account_age`.
-      defaultAccountAgeDays: 7,
+      defaultAccountAgeDays: 30,
 
       // Member count threshold used when `defaultCriteria` is `server_size`.
       // Example: 1000 means auto-verify if server has fewer than 1000 members.
@@ -362,7 +362,7 @@ export const botConfig = {
     // Welcome template posted when a user joins.
     // Placeholders: {user}, {server}, {memberCount}
     defaultWelcomeMessage:
-      "Welcome {user} to {server}! We now have {memberCount} members!",
+      "Yahho, {user}! Welcome to {server}! We now have {memberCount} members! Enjoy your stay :D",
     // Goodbye template posted when a user leaves.
     // Placeholders: {user}, {memberCount}
     defaultGoodbyeMessage:
@@ -424,13 +424,13 @@ export const botConfig = {
   // GENERIC BOT MESSAGES
   // =========================
   messages: {
-    noPermission: "You do not have permission to use this command.",
-    cooldownActive: "Please wait {time} before using this command again.",
-    errorOccurred: "An error occurred while executing this command.",
+    noPermission: "Sorry! You can't use that command. D:",
+    cooldownActive: "Hey! Please wait {time} before using this command again.",
+    errorOccurred: "An error occurred while executing this command. Oopsies!",
     missingPermissions:
-      "I am missing required permissions to perform this action.",
+      "I am missing required permissions to perform this action. Oh noes.",
     commandDisabled: "This command has been disabled.",
-    maintenanceMode: "The bot is currently in maintenance mode.",
+    maintenanceMode: "Currently in Maintenance Mode! Try again later.",
   },
 
   // =========================
